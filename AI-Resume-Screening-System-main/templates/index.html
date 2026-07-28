@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Resume Screening System</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<!--==================== NAVBAR ====================-->
+
+<header class="navbar">
+
+    <div class="container nav-container">
+
+        <a href="#home" class="logo">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <span>AI Resume Screening</span>
+
+        </a>
+
+        <nav>
+
+            <ul class="nav-links">
+
+                <li>
+
+                    <a href="#home">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="#features">
+
+                        Features
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="#upload">
+
+                        Analyze
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="#results">
+
+                        Results
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <a href="#upload"
+           class="btn btn-primary">
+
+            Analyze Resume
+
+        </a>
+
+    </div>
+
+</header>
+
+<!--==================== HERO ====================-->
+
+<section
+    id="home"
+    class="hero">
+
+    <div class="container hero-container">
+
+        <div class="hero-left">
+
+            <span class="hero-badge">
+
+                AI Powered Resume Intelligence
+
+            </span>
+
+            <h1>
+
+                Analyze Your Resume
+
+                <span>
+
+                    Like a Professional ATS
+
+                </span>
+
+            </h1>
+
+            <p>
+
+                Upload your resume and receive an ATS Score,
+                AI Prediction, Job Description Match,
+                Skills Analysis,
+                Resume Strength,
+                Missing Keywords
+                and personalized AI recommendations.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#upload"
+                   class="btn btn-primary">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    Analyze Resume
+
+                </a>
+
+                <a href="#features"
+                   class="btn btn-outline">
+
+                    Learn More
+
+                </a>
+
+            </div>
+
+            <div class="hero-rating">
+
+                <div class="stars">
+
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+
+                </div>
+
+                <span>
+
+                    Trusted by Students &
+                    Job Seekers
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+
+            <img
+
+                src="{{ url_for('static', filename='images/hero.png') }}"
+
+                alt="Hero Illustration">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================== STATS ====================-->
+
+<section class="stats">
+
+    <div class="container stats-grid">
+
+        <div class="stat-card">
+
+            <h2>
+
+                12K+
+
+            </h2>
+
+            <p>
+
+                Resumes Analyzed
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>
+
+                98.7%
+
+            </h2>
+
+            <p>
+
+                Prediction Accuracy
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>
+
+                150+
+
+            </h2>
+
+            <p>
+
+                Skills Database
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>
+
+                25+
+
+            </h2>
+
+            <p>
+
+                Supported Categories
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!--==================== FEATURES ====================-->
+
+<section id="features" class="features">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+
+                WHY CHOOSE US
+
+            </span>
+
+            <h2>
+
+                Powerful ATS Resume Analysis
+
+            </h2>
+
+            <p>
+
+                Everything you need to optimize your resume for recruiters
+                and Applicant Tracking Systems.
+
+            </p>
+
+        </div>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-star"></i>
+
+                </div>
+
+                <h3>ATS Score</h3>
+
+                <p>
+
+                    Calculate ATS compatibility using multiple weighted
+                    parameters.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                </div>
+
+                <h3>JD Matching</h3>
+
+                <p>
+
+                    Compare your resume against the Job Description.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+                <h3>AI Prediction</h3>
+
+                <p>
+
+                    Predict the most suitable job role using Machine Learning.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+                <h3>Skill Extraction</h3>
+
+                <p>
+
+                    Detect technical skills directly from your resume.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+                <h3>AI Suggestions</h3>
+
+                <p>
+
+                    Receive personalized suggestions to improve your resume.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <h3>Resume Analytics</h3>
+
+                <p>
+
+                    Understand strengths and weaknesses instantly.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==================== ANALYZER ====================-->
+
+<section
+    id="upload"
+    class="analyzer">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span class="section-tag">
+
+                START ANALYSIS
+
+            </span>
+
+            <h2>
+
+                Upload Your Resume
+
+            </h2>
+
+            <p>
+
+                Upload your resume and optionally paste a Job Description
+                for a complete ATS analysis.
+
+            </p>
+
+        </div>
+
+        <form
+            method="POST"
+            enctype="multipart/form-data"
+            id="resumeForm">
+
+            <!-- Upload -->
+
+            <div class="upload-box">
+
+                <label class="upload-area">
+
+                    <input
+                        type="file"
+                        name="resume"
+                        accept=".pdf"
+                        required>
+
+                    <div class="upload-content" id="uploadContent">
+
+                        <i
+                            class="fa-solid fa-cloud-arrow-up"
+                            id="uploadIcon"></i>
+
+                        <h3 id="uploadTitle">
+
+                            Drag & Drop Resume
+
+                        </h3>
+
+                        <p id="uploadText">
+
+                            or Click to Browse
+
+                        </p>
+
+                        <small id="uploadSize">
+
+                            PDF Only • Max 5 MB
+
+                        </small>
+
+                    </div>
+
+                </label>
+
+            </div>
+
+            <!-- Job Description -->
+
+            <div class="jd-box">
+
+                <label>
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    Job Description (Optional)
+
+                </label>
+
+                <textarea
+
+                    name="job_description"
+
+                    rows="10"
+
+                    placeholder="Paste the Job Description here..."></textarea>
+
+            </div>
+
+            <!-- Button -->
+
+            <div class="button-wrapper">
+
+                <button
+                    type="submit"
+                    class="btn btn-primary analyze-btn">
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    Analyze Resume
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!--==================== LOADING ====================-->
+
+<div class="loading-overlay">
+
+    <div class="loader-card">
+
+        <div class="loader-circle"></div>
+
+        <h3>
+
+            AI is analyzing your resume...
+
+        </h3>
+
+        <ul>
+
+            <li>
+
+                ✓ Reading Resume
+
+            </li>
+
+            <li>
+
+                ✓ Extracting Skills
+
+            </li>
+
+            <li>
+
+                ✓ Calculating ATS Score
+
+            </li>
+
+            <li>
+
+                ✓ Matching Job Description
+
+            </li>
+
+            <li>
+
+                ✓ Predicting Job Role
+
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+<!--==================== ERROR ====================-->
+
+{% if error %}
+
+<div class="container">
+
+    <div class="error-box">
+
+        <i class="fa-solid fa-circle-exclamation"></i>
+
+        {{ error }}
+
+    </div>
+
+</div>
+
+{% endif %}
+
+{% if prediction %}
+
+<!--==================== RESULTS ====================-->
+
+<section
+    id="results"
+    class="results">
+
+<div class="container">
+
+<div class="section-header">
+
+    <span class="section-tag">
+
+        ANALYSIS REPORT
+
+    </span>
+
+    <h2>
+
+        Resume Analysis Dashboard
+
+    </h2>
+
+</div>
+
+<div class="dashboard-grid">
+    <!--==================== PREDICTION ====================-->
+
+<div class="card">
+
+    <div class="card-header">
+
+        <i class="fa-solid fa-user-tie"></i>
+
+        <h3>Predicted Role</h3>
+
+    </div>
+
+    <div class="prediction-badge">
+
+        {{ prediction }}
+
+    </div>
+
+</div>
+
+<!--==================== ATS SCORE ====================-->
+
+<div class="card">
+
+    <div class="card-header">
+
+        <i class="fa-solid fa-star"></i>
+
+        <h3>ATS Score</h3>
+
+    </div>
+
+    <div class="circle-score"
+         data-value="{{ ats_score }}">
+
+        <span>{{ ats_score }}%</span>
+
+    </div>
+
+</div>
+
+<!--==================== CONFIDENCE ====================-->
+
+<!--
+
+<div class="card">
+
+    <div class="card-header">
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        <h3>AI Confidence</h3>
+
+    </div>
+
+    <div class="circle-score"
+         data-value="{{ confidence }}">
+
+        <span>{{ confidence }}%</span>
+
+    </div>
+
+</div>
+
+-->
+
+<!--==================== JD MATCH ====================-->
+
+<div class="card">
+
+    <div class="card-header">
+
+        <i class="fa-solid fa-briefcase"></i>
+
+        <h3>JD Match</h3>
+
+    </div>
+
+    {% if jd_match is not none %}
+
+        <div class="circle-score"
+             data-value="{{ jd_match }}">
+
+            <span>{{ jd_match }}%</span>
+
+        </div>
+
+    {% else %}
+
+        <div class="circle-score"
+             data-value="0">
+
+            <span>N/A</span>
+
+        </div>
+
+        <p style="text-align:center; color:#64748b; margin-top:10px;">
+            No Job Description Provided
+        </p>
+
+    {% endif %}
+
+</div>
+
+<!--==================== RESUME ====================-->
+
+<div class="card full-width">
+
+    <div class="card-header">
+
+        <i class="fa-solid fa-file-pdf"></i>
+
+        <h3>Uploaded Resume</h3>
+
+    </div>
+
+    <div class="resume-file">
+
+        {{ filename }}
+
+    </div>
+
+</div>
+
+<!--==================== SKILLS ====================-->
+
+<div class="card">
+
+    <div class="card-header">
+
+        <i class="fa-solid fa-code"></i>
+
+        <h3>Skills Found</h3>
+
+    </div>
+
+    <div class="chip-container">
+
+        {% if skills %}
+
+            {% for skill in skills %}
+
+                <span class="chip success">
+
+                    {{ skill }}
+
+                </span>
+
+            {% endfor %}
+
+        {% else %}
+
+            <span class="empty">
+
+                No Skills Detected
+
+            </span>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+<!--==================== MISSING SKILLS ====================-->
+
+<div class="card">
+
+    <div class="card-header">
+
+        <i class="fa-solid fa-triangle-exclamation"></i>
+
+        <h3>Missing Skills</h3>
+
+    </div>
+
+    <div class="chip-container">
+
+        {% if missing_skills %}
+
+            {% for skill in missing_skills %}
+
+                <span class="chip danger">
+
+                    {{ skill }}
+
+                </span>
+
+            {% endfor %}
+
+        {% else %}
+
+            <span class="success-message">
+
+                🎉 No Missing Skills
+
+            </span>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+<!--==================== RESUME STRENGTH ====================-->
+
+<div class="card full-width">
+
+    <div class="card-header">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        <h3>Resume Strength</h3>
+
+    </div>
+
+    {% if ats_score >= 90 %}
+
+        <div class="strength excellent">
+
+            ⭐ Excellent Resume
+
+        </div>
+
+    {% elif ats_score >= 75 %}
+
+        <div class="strength good">
+
+            ✅ Strong Resume
+
+        </div>
+
+    {% elif ats_score >= 60 %}
+
+        <div class="strength average">
+
+            ⚠ Good but Needs Improvement
+
+        </div>
+
+    {% else %}
+
+        <div class="strength poor">
+
+            ❌ Needs Significant Improvement
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+<!--==================== AI SUGGESTIONS ====================-->
+
+<div class="card full-width">
+
+    <div class="card-header">
+
+        <i class="fa-solid fa-lightbulb"></i>
+
+        <h3>AI Suggestions</h3>
+
+    </div>
+
+    <ul class="suggestions">
+
+        {% if ats_score is not none and ats_score < 90 %}
+            <li>✔ Improve your ATS score by adding more relevant keywords.</li>
+        {% endif %}
+
+        {% if jd_match is not none and jd_match < 80 %}
+            <li>✔ Tailor your resume according to the Job Description.</li>
+        {% endif %}
+
+        {% if missing_skills %}
+            <li>✔ Add missing technical skills wherever applicable.</li>
+        {% endif %}
+
+        <li>✔ Include measurable achievements using numbers.</li>
+
+        <li>✔ Add certifications and internship experience.</li>
+
+        <li>✔ Keep the resume clean, concise and ATS friendly.</li>
+
+        {% if jd_match is none %}
+            <li>ℹ️ Upload a Job Description to receive JD Match analysis and personalized recommendations.</li>
+        {% endif %}
+
+    </ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+{% endif %}
+
+<!--==================== FOOTER ====================-->
+
+<footer>
+
+    <div class="container footer-container">
+
+        <h2>AI Resume Screening System</h2>
+
+        <p class="developer-name">
+            Developed by <strong>Sharad Verma</strong>
+        </p>
+
+        <p>
+            Built using Flask, Machine Learning, NLP, HTML, CSS and JavaScript.
+        </p>
+
+        <div class="social-links">
+
+            <a href="https://github.com/sharadverma6306"
+               target="_blank"
+               aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://linkedin.com/in/sharadverma6306"
+               target="_blank"
+               aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+        </div>
+
+        <p>
+            © 2026 Sharad Verma. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+<script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+
+</body>
+</html>
